@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding: ensures proper display of accents and symbols -->
     <meta charset="UTF-8">
+    <!-- Responsive viewport: scales layout on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+    <!-- Preconnect: speeds up font loading from Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter font: weights 400, 500, 600, 700 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Badge shown in top-center; indicates this is the static HTML version -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+
+    <!-- Pricing cards wrapper: flexbox row, centered -->
     <div class="cards-container">
+        <!-- Card 1: Hobby (free tier) -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -20,6 +29,7 @@
                 </p>
                 <div class="card-content">
                     <p class="includes-text">Includes:</p>
+                    <!-- Feature list: bullet style via .checkmark -->
                     <ul class="features-list">
                         <li>
                             <span class="checkmark">✓</span>
@@ -36,8 +46,11 @@
                     </ul>
                 </div>
             </div>
+            <!-- Secondary = muted; primary = dark (see .primary in CSS) -->
             <button class="download-button secondary">Download</button>
         </div>
+
+        <!-- Card 2: Pro (paid tier) -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
@@ -68,6 +81,38 @@
                 </div>
             </div>
             <button class="download-button primary">Get Pro</button>
+        </div>
+
+        <!-- Card 3: Enterprise (custom/contact tier) -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated support
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom integrations
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            SSO & advanced security
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Volume licensing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="download-button primary">Contact sales</button>
         </div>
     </div>
 </body>
